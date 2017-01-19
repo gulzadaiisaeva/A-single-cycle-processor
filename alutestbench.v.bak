@@ -1,0 +1,26 @@
+module alutestbench();
+	reg [31:0] A;
+	reg [31:0] B;
+	wire [31:0] ALUResult;
+	wire Z1;
+	reg [2:0]ALUctr;
+
+	alu elma(Z1,ALUResult,A,B,ALUctr);
+	
+initial begin
+
+	A = 32'b00000000000000000000000000000001; B = 32'b00000000000000000000000000000010; ALUctr= 3'b010;
+	#20;
+	
+end
+ 
+initial
+begin
+
+$monitor("time = %2d, A =%32b, B=%32b, ALUResultres=%32b, Z= %1b, ALUctr=%3b", $time, A, B, ALUResult,Z1,ALUctr);
+
+end
+ 
+
+
+endmodule

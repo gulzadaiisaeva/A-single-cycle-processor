@@ -1,0 +1,6 @@
+module ALUControl (AluControl,func,AluOp)
+
+
+
+
+end module
